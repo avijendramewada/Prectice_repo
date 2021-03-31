@@ -1,0 +1,54 @@
+form {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 70%;
+    /* To see the limits of the form */
+    padding:10px;
+    border: 1px solid #CCC;
+   
+    border-radius: 10px;
+    
+  }
+  #survey-form {
+    background-color: rgb(207, 205, 218);
+    padding: 20px;
+  }
+  #number {
+    width: 150px;
+  }
+  
+  input[type=text] {
+    padding: 10px;
+    width: 70%;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[type=email] {
+    padding: 10px;
+    width: 70%;
+     display: inline-block;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[type=number] {
+    padding: 10px;
+    width: 70%;
+     display: inline-block;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[id=user_number] {
+    padding: 10px;
+    width: 70%;
+     display: inline-block;
+     border: none;
+     background: #f1f1f1;
+   }
+   button {
+width: 70%;
+padding: 10px;
+font-size: 20px;
+background-color: green;
+color: honeydew;
+    
+  } 
