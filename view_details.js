@@ -12,7 +12,25 @@ function saveArrayData() {
         <td>${storedData[3]}</td>
          <td>${storedData[4]}</td>
           <td>${storedData[5]}</td>
+      <td><button onclick="editdetail('${storedData}')" style="background-color:darkgrey; text-items: center " >Edit</button> 
     `; 
     list.appendChild(row);
 }
   
+function editdetail(storedData) {
+  console.log("Hello", storedData);
+  window.open("edit_form.html?" + storedData);
+}
+
+//  function removeBook(isbn) {
+//     const books = Store.getBooks();
+
+//     books.forEach((book, index) => {
+//       if(book.isbn === isbn) {
+//         books.splice(index, 1);
+//       }
+//     });
+
+//     localStorage.setItem('books', JSON.stringify(books));
+//   }
+// }
