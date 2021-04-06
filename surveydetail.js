@@ -1,7 +1,5 @@
+//Get the user name and email from the localstorage and show on the table when the  function render in the dom 
 function dispData() {
-  // var key = JSON.parse(localStorage.getItem('user_email'));
-  // console.log(key);
-  // // console.log(key);
     for (let i = 0; i < localStorage.length; i++) {
          var key = localStorage.key(i);
         var storedData = JSON.parse(localStorage.getItem(key));
@@ -10,23 +8,29 @@ function dispData() {
     row.innerHTML = `
       <td>${ storedData[0]}</td>
       <td>${storedData[1]}</td>
-      <td><button onclick="viewdetail('${storedData}')" style="background-color:darkgrey; text-items: center " >View more</button></td>
+      <td><button onclick="viewdetail('${storedData}')" style="background-color:darkgrey; text-items: center " >View more</button> 
+             <button onclick="deleterecord('${storedData[1]}')" style="background-color:darkgrey; text-items: center " >Delete</button> 
+  
+</td>
+
     `;
+     
     list.appendChild(row);
   }
  
 }
+//view the all details of selected key
 function viewdetail(storedData) {
   console.log("Hello", storedData);
-  window.open("view_details.html?"+storedData );
-// for (let i = 0; i < localStorage.length; i++) {
-//          var key = localStorage.key(i);
-//         var storedData = JSON.parse(localStorage.getItem(key));
-//       console.log(storedData[1]);
-       
+  window.location.replace("view_details.html?" + storedData);
+}
+ //----Delete the record from localstorage and table
+function deleterecord(storedData) {
+  console.log("Hello", storedData);
+  localStorage.removeItem(storedData);
+  //window.open("survey_from_submissions.html" );
+  window.location.reload();
   }
- 
-
 
 
 
