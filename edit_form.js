@@ -6,15 +6,20 @@ function saveArrayData() {
     document.getElementById("name").value = storedData[0];
     document.getElementById("mail").value = storedData[1];
     document.getElementById("phonenumber").value = storedData[2];
-    document.getElementById("age").value = storedData[3];
-    document.getElementById("gender").value = storedData[4];
+  document.getElementById("age").value = storedData[3];
+  if (storedData[4] == "male") {
+    var radiobtn = document.getElementById("selectgen");
+    radiobtn.checked = true;
+  } else if (storedData[4] == "female") {
+     var radiobtn = document.getElementById("selectgen1");
+    radiobtn.checked = true;
+  } else {
+     var radiobtn = document.getElementById("selectgen2");
+    radiobtn.checked = true;
+  }
     document.getElementById("msg").value = storedData[5];
-//      var user_name = document.myform.user_name.saveArrayData[0];
-//   var user_email = document.myform.user_email.saveArrayData[1];
-//   var user_number = document.myform.user_number.value;
-//   var age = document.myform.age.value;
-//   var user_message = document.myform.user_message.value;
-//   var gender = document.myform.gender.value;
+ 
+    console.log('gender' + storedData[4]);
 
 }
 
@@ -65,9 +70,6 @@ function validateform() {
     
    else {
       userData = [user_name, user_email,user_number, age, gender, user_message];
-      userData.pop(userData);
-      // var array = JSON.parse(localStorage.getItem('user_details') || '[]');
-      // array.push(user_details);
       localStorage.setItem(user_email, JSON.stringify(userData));
       //  localStorage.setItem('inputs', JSON.stringify(arrData));
     }
