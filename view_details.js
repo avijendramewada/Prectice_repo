@@ -19,18 +19,7 @@ function saveArrayData() {
   
 function editdetail(storedData) {
   console.log("Hello", storedData);
-  window.open("edit_form.html?" + storedData);
+   window.location.replace("edit_form.html?" + storedData);
 }
 
-//  function removeBook(isbn) {
-//     const books = Store.getBooks();
 
-//     books.forEach((book, index) => {
-//       if(book.isbn === isbn) {
-//         books.splice(index, 1);
-//       }
-//     });
-
-//     localStorage.setItem('books', JSON.stringify(books));
-//   }
-// }
