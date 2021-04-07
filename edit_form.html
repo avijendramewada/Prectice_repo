@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="edit_form.css">
+</head>
+
+<body onload="saveArrayData()">
+    <div class="container">
+        <form name="myform" id="survey-form" method="post" action="survey_from_submissions.html"
+            onsubmit="return validateform()">
+            <h1 style="text-align:center;font-size:25px; margin-top: 15px;">Survey form</h1>
+            <div>
+                <label id="name-label" for="name">Name</label><br>
+                <input type="text" id="name" name="user_name" placeholder="Enter name here">
+                 
+            </div>
+            <div>
+                <label id="email-label" for="Email">Email</label><br>
+                <input type="text"id="mail" disabled name="user_email" placeholder="Enter email here">  
+            </div>
+            <div>
+                <label id="number-label" for="phone">Phone Number</label><br>
+                <!-- <input type="number" id="number" name="user_name" placeholder="Enter 10 digit number" min="1" max="9">  </div> -->
+                <input name="user_number" id="phonenumber" placeholder="Enter 10 digit number">
+            </div>
+            <div>
+                <label id="age-label" for="age">Age</label><br>
+                <input type="number"id="age" name="age" placeholder="Enter age here">  
+            </div>
+
+            <!-- ------------------Radio Buttons-------------------------------- -->
+            <div>
+                <label for="Gender">Gender</label><br>
+            <p >
+                    <input type="radio"  id="selectgen" name="gender" value="male" > Male<br>
+                    <input type="radio"  id="selectgen1" name="gender" value="female"> Female<br>
+                    <input type="radio"  id="selectgen2" name="gender" value="other"> Other
+            </p>
+            </div>
+
+            <!-- ------------------Checkboxes-------------------------------- -->
+
+            <!-- <label for="Gender">Check All That Apply</label>
+            <p>
+                <input type="checkbox" id="project"> front end project<br>
+                <input type="checkbox" id="project1">Back end project <br>
+                <input type="checkbox" id="challenge"> Challeges<br>
+                <input type="checkbox" id="videos" checked> Videos<br>
+
+            </p> -->
+
+            <!-------------------Text Area------------>
+            <div>
+                <label for="msg" ></label>
+                <p> Any comment or suggestions?</p>
+                <textarea  id="msg" type="text" name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>  
+            </div>
+
+            <!--------Button for submit the form-->
+            <div id="submitbutton">
+                <button type="submit" id="submit">Submit</button>  
+            </div>
+        </form>
+
+    </div>
+    <script src="edit_form.js">
+    </script>
+
+</body>
+
+</html>

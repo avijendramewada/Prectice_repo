@@ -1,0 +1,202 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- <link  rel="stylesheet" href="./test.css"> --> -->
+</head>
+<body>
+     <div class='main'>
+         
+    </div>
+<div class="container mt-4">
+    <h1 class="display-4 text-center">
+        <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Book</span>List
+    </h1>
+    <form id="book-form">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input type="text" id="author" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="isbn">ISBN#</label>
+            <input type="text" id="isbn" class="form-control">
+        </div>
+        <input type="submit" value="Add Book" class="btn btn-primary btn-block">
+    </form>
+    <table class="table table-striped mt-5">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>ISBN#</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="book-list"></tbody>
+    </table>
+</div>
+
+     </div>
+     <script src="survey.js">
+    </script>
+     </body> </htm>
+     <!-- <form name="form1" method="post" action="test1.html">
+        <label>Name:
+            <input type="text" id="fname" name="lastName" />
+        </label>
+        <input type="submit" name="submitName" value="Submit" onclick="setName()">
+    
+        <script>
+            function setName() {
+                var userName = document.getElementById("fname");
+                localStorage.setItem("lastName", userName.value);
+            }
+        </script>
+    </form> -->
+
+<!-- <img src="./images/backgroungimg.jpg"> -->
+<!-- <form class=form>
+    <label for="">name</label><br>
+<input type="text" placeholder="enter name"><br>
+<label for="">surname</label><br>
+<input type="text" placeholder="sur name">
+</form> -->
+    <!-- </div> -->
+<!-- </body>
+</html>  -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM DATA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            margin: 10px 50px;
+        }
+
+        .form-group {
+            margin: 10px;
+        }
+
+        input {
+            width: 100%;
+            border: solid 1px #eee;
+            padding: 15px 10px;
+        }
+
+        button {
+            width: 200px;
+            padding: 15px;
+            margin-left: 250px;
+            background: #fff;
+            color: dodgerblue;
+            border: solid 1px dodgerblue;
+            cursor: pointer;
+            transition: all .38s ease-in-out;
+        }
+
+        button:hover {
+            background: dodgerblue;
+            color: #fff;
+        }
+
+        table tr td {
+            border: solid 1px #eee;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>SIGNUP FORM</h2>
+        <form role="form" onsubmit="signUp(event);">
+            <div class="form-group">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="pwd" id="pwd" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+
+        <h2>MY INFO</h2>
+        <div id="output">
+            <!-- DISPLAY USERS DATA -->
+        <!-- </div>
+    </div>
+
+    <script type="text/javascript">
+        const signUp = e => {
+            let formData = {
+                fname: document.getElementById('fname').value,
+                lname: document.getElementById('lname').value,
+                email: document.getElementById('email').value,
+                pwd: document.getElementById('pwd').value
+            }
+            localStorage.setItem('formData', JSON.stringify(formData));
+            // console.log(localStorage.getItem('formData'));
+            dispData();
+           
+        }
+for(let i=0;i<localStorage.length;i++){
+        function dispData() {
+            // console.log(localStorage.getItem('formData'));
+            let formd ={ fname, lname, email, pwd } = JSON.parse(localStorage.getItem('formData'));
+            var output = document.getElementById('output');
+            output.innerHTML = `
+            <table>
+                <tbody>
+                    <tr>
+                        <td>First Name</td>
+                        <td>${fname}</td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td>${lname}</td>
+                    </tr>
+                    <tr>
+                        <td>Email Address</td>
+                        <td>${email}</td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>${pwd}</td>
+                    </tr>
+                </tbody>
+            </table>`;
+        }}
+        dispData();
+    </script>
+</body>
+
+</html> -->

@@ -1,0 +1,6 @@
+{
+    "html.format.indentHandlebars": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "html.format.endWithNewline": true
+}
