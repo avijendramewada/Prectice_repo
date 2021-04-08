@@ -1,7 +1,10 @@
 import React,{useState} from 'react';
 import './Form.css';
 import { Link, Redirect } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+
 function SurveyForm(){
+  const history = useHistory();
   let [username, setName] = useState('');
   let [email, setEmail] = useState('');
   let [usernumber, setNumber] = useState('');
@@ -54,44 +57,37 @@ function SurveyForm(){
         //  localStorage.setItem('inputs', JSON.stringify(arrData));
      
       }
-     return <Redirect to="/SurveyForm"/>
-       alert("hello");
+      history.push('/');
     }
     return (
       <div className="container">
-    <div > 
-<form  >
-      <h1 >Survey form</h1>
-          
-               <h5>Username</h5>
-                <input type="text" value ={username} onChange ={e => setName(e.target.value) } placeholder="Enter name here"/>
-                <h5>Email</h5>
-                <input type="text"value ={email} onChange ={e => setEmail(e.target.value) } placeholder="Enter email here"/>  
-                <h5>Number</h5>
-                <input name="user_number" value ={usernumber} onChange ={e => setNumber(e.target.value) } placeholder="Enter 10 digit number"/>
-                 <h5>Age</h5>
-                <input type="number" value ={userage} onChange ={e => setAge(e.target.value) } placeholder="Enter age here"/>  
-                <div >
-                {/* onChange={this.setGender.bind(this)} */}
-                  <h5  >Gender</h5>
-        <input type="radio" name="gender" checked={gender === 'Male'} value="Male" onClick={() => setGender('Male')}/> Male
-        <input type="radio"  name="gender"checked={gender === 'Female'} value="Female" onClick={() => setGender('Female')}/>Female
+      <div>
+        <form>
+          <h1>Survey form</h1>
+          <h5>Username</h5>
+          <input type="text" value={username} onChange={e=>setName(e.target.value) } placeholder="Enter name here"/>
+          <h5>Email</h5>
+          <input type="text" value={email} onChange={e=>setEmail(e.target.value) } placeholder="Enter email here"/>
+          <h5>Number</h5>
+          <input name="user_number" value={usernumber} onChange={e=>setNumber(e.target.value) } placeholder="Enter 10 digit number"/>
+          <h5>Age</h5>
+          <input type="number" value={userage} onChange={e=>setAge(e.target.value) } placeholder="Enter age here"/>
+          <div>
+            <h5>Gender</h5>
+            <input type="radio" name="gender" defaultChecked={gender==='Male' } value="Male" onChange={()=>setGender('Male')}/> Male
+            <input type="radio" name="gender" defaultChecked={gender==='Female' } value="Female" onChange={()=>setGender('Female')}/>Female
+          </div>
+          <div>
+            <label htmlFor="msg"></label>
+            <p>Any comment or suggestions?</p>
+            <textarea type="text" value={usermsg} onChange={e=>setMsg(e.target.value) } rows="4" cols="50" placeholder="Enter Text Here"></textarea>
+          </div>
+          <div id="submitbutton">
+            <button type="submit" id="submit" onClick={Submit}>Submit</button>
+          </div>
+        </form>
       </div>
-          
-            <div>
-                <label  for="msg"></label>
-                <p> Any comment or suggestions?</p>
-                <textarea type="text" value ={usermsg} onChange ={e => setMsg(e.target.value) } rows="4" cols="50" placeholder="Enter Text Here"></textarea>  
-            </div>
-
-            
-            <div id="submitbutton">
-                <button type="submit" id="submit"  onClick ={Submit}>Submit</button>  
-            </div>
-
-</form>
-</div>  
-</div>
+    </div>
     
     )
 }
