@@ -1,28 +1,31 @@
+
 import Home from "./Home";
 import SurveyForm from "./SurveyForm";
 import {BrowserRouter as Router, Switch,Route} from "react-router-dom"
 import FormSubmissionDetail from "./FormSubmissionDetail";
 function App() {
   return (
-      <Router>
+      
     <div >
+            <Router>
        <Switch> 
         <Route  path="/onform">
           <SurveyForm />
         </Route>
-         <Route path="/formDetails">
+         <Route path="/detailpage">
          <FormSubmissionDetail/>
          </Route>
-        <Route path="/details" >
+        {/* <Route path="/newpage" >
         <SurveyForm/>
-        </Route>
+        </Route> */}
         <Route path="/">
         <Home/>
 </Route>
-       </Switch>  
+       </Switch>
+       </Router>  
     </div>
- </Router> );
 
+  )
 }
 
 export default App;
