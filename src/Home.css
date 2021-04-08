@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  #showcase {
+    /* background-image: url('./images/pexels-lex-photography-1109543.jpg'); */
+    background-color: #f1f1dd;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  #showcase h1 {
+    font-size: 50px;
+    line-height: 1.2;
+  }
+  
+  #showcase p {
+      margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  #showcase button Link {
+    font-size: 18px;
+    text-decoration: none;
+    color: #dfe9ebef;
+    background: #cbd3cc;
+    border: #926239 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  /* To give a little highligh on active elements */
+  
+  #showcase .button:hover {
+    background: #926239;
+    color: #fff;
+  }
+  
+  #section {
+    padding: 20px;
+    background: #5f5e5c;
+    color: #fff;
+    text-align: center;
+  }

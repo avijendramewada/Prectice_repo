@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
 
+import Home from "./Home";
+import SurveyForm from "./SurveyForm";
+import {BrowserRouter as Router, Switch,Route} from "react-router-dom"
+import FormSubmissionDetail from "./FormSubmissionDetail";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+    <div >
+       <Switch> 
+        <Route  path="/onform">
+          <SurveyForm />
+        </Route>
+         <Route path="/formDetails">
+         <FormSubmissionDetail/>
+         </Route>
+        {/* </Route>
+
+        <Route path="/details">
+        </Route> */}
+        {/*
+        <Elements stripe={promise}>
+           <Payment/>
+        </Elements>
+</Route>
+        <Route path="/">
+        <Header />
+        <Home/>
+</Route>*/}<Route path="/">
+       
+        <Home/>
+</Route>
+       </Switch>  
     </div>
-  );
+ </Router> );
+
 }
 
 export default App;

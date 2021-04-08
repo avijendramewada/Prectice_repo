@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* color: rgb(26, 25, 25); */
+    font-size: 24px;
+   
+}
+.container{
+   height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h1{
+text-align: center;
+}
+/* .container{
+    height: 100%;
+    width: 100%;
+    background-image: url(./images/backgroungimg.jpg);
+    background-size: cover;
+    position: absolute;
+    background-position: center;
+}
+
+/* body {
+    background-image: url('./images/backgroungimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+form {
+    background-color: rgb(72, 72, 161);
+    margin: 25px auto;
+    color: rgb(199, 199, 207);
+    padding: 30px;
+    width: 50vh;
+    height: 100%;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    
+}
+
+#survey-form {
+    background-color: rgb(106, 92, 177);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#number {
+    width: 150px;
+}
+
+input[type=text], input[type=email], input[type=number], input[name=user_number] {
+    height: 40px;
+    width: 100%;
+    border: 1px, solid white;
+    border-radius: 10px;
+    background: #f0e9e9;
+    color: black;
+}
+
+/* input[type=email] {
+    height: 40px;
+    width: 100%;
+     
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[type=number] {
+    height: 40px;
+    width: 100%;
+     display: inline-block;
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[id=user_number] {
+    height: 40px;
+    width: 100%;
+     display: inline-block;
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   } */
+
+textarea[type=text] {
+    height: 100px;
+    background-color: #f0e9e9;
+    border: 1px, solid white;
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    font-size: 20px;
+}
+input[type=radio]{
+    margin-left: 15px;
+    font-size: 23px;
+
+}
+
+button {
+    height: 40px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: green;
+    color: honeydew;
+} 
