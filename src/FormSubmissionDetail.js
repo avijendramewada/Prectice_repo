@@ -2,7 +2,7 @@ import React from 'react';
 import './FormSubmission.css';
 const FormSubmissionDetail = () => {
     return (
-        <body onload="dispData()">
+        <body >
    
        <h1 style="text-align: center;"> User Table</h1>
     <table id="usertable">

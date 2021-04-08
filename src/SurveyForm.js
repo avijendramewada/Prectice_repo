@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import './Form.css';
-import { Link,Redirect } from 'react-router-dom';
-import { browserHistory } from 'react-router'
+import { Link, Redirect } from 'react-router-dom';
 function SurveyForm(){
   let [username, setName] = useState('');
   let [email, setEmail] = useState('');
@@ -55,18 +54,12 @@ function SurveyForm(){
         //  localStorage.setItem('inputs', JSON.stringify(arrData));
      
       }
-     
-      <Link to="/somewhere/else"/>
+     return <Redirect to="/SurveyForm"/>
        alert("hello");
     }
- 
-  // setGender(event) {
-  //   console.log(event.target.value);
-  // }
     return (
       <div className="container">
     <div > 
-      {/* // onSubmit={submitForm} */}
 <form  >
       <h1 >Survey form</h1>
           

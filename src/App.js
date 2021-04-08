@@ -14,20 +14,10 @@ function App() {
          <Route path="/formDetails">
          <FormSubmissionDetail/>
          </Route>
-        {/* </Route>
-
-        <Route path="/details">
-        </Route> */}
-        {/*
-        <Elements stripe={promise}>
-           <Payment/>
-        </Elements>
-</Route>
+        <Route path="/details" >
+        <SurveyForm/>
+        </Route>
         <Route path="/">
-        <Header />
-        <Home/>
-</Route>*/}<Route path="/">
-       
         <Home/>
 </Route>
        </Switch>  
