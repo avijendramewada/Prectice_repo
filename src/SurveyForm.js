@@ -57,7 +57,7 @@ function SurveyForm(){
         //  localStorage.setItem('inputs', JSON.stringify(arrData));
      
       }
-      history.push('/');
+      history.push('detailpage');
     }
     return (
       <div className="container">
