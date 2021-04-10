@@ -1,50 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="chessBoard"></div>
+< !DOCTYPE html > < html lang = "en" > < head > < meta charset = "UTF-8" > < meta http - equiv = "X-UA-Compatible"
+content = "IE=edge" > < meta name = "viewport"
+content = "width=device-width, initial-scale=1.0" > < title > Document < /title>
+</head > < body > < h1 > hessBoard Pattern < /h1>
     <script>
-        var i,j ;
-        for(i=1;i<=5;i++){
-            for(j=1; j<=i;j++){
-               
-                document.write(i +" " );
-            }
-            document.write('<br/>')
-        }
-         for(i=5;i>=1;i--){
-            for(j=i; j>=1;j--){
-               
-                document.write(i +" ");
-            }
-            document.write('<br/>')
-        }
-//       
-        var num = 8;
-        for(i = 1; i<=num; i++){ 
-            for(k=1; k<=(num-i) ;k++){
-                document.write(" &nbsp");
-            }
-            for(j=1; j<=i; j++){
-                document.write(i +'&nbsp ' );
-            }
-          
-            document.write('<br/>')
-        }
-for (var i = 1; i<=8; i++) {
+for(var i = 1; i<=8; i++) {
     for (var j = 1; j <= 8; j++) {
-        if (i%2 ==0 || j%2==0) {
-            document.write(' black &nbsp');
+        if (i%2 == j%2) {
+            document.write(' white &nbsp');
         } else {
-            document.write('white &nbsp'); 
+            document.write('black &nbsp'); 
         }
     } 
-    document.write('<br/>')
+    document.write('<br/ > ')
     } 
 
     </script>
