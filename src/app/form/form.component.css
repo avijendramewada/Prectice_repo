@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: cornsilk;
+    font-size: 20px;
+   
+}
+.container{
+    height: 100%;
+    width: 100%;
+    background-image: url(./../../images/backgroungimg.jpg);
+    background-size: cover;
+    position: fixed;
+    background-position: center;
+}
+
+/* body {
+    background-image: url('./images/backgroungimg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+} */
+
+/* form {
+    margin: 35px auto;
+    padding: 10px;
+    width: 50vh;
+    height: 80wh;
+    justify-content: center;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    
+} */
+
+#survey-form {
+    margin: 80px auto;
+    padding: 20px;
+    border-radius: 20px;
+    width: 50vh;
+    height: 80wh;
+    background-color: rgb(50, 44, 82);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* padding: 0 20px; */
+}
+
+#number {
+    width: 150px;
+}
+
+input[type=text], input[type=email], input[type=number], input[name=user_number] {
+    height: 40px;
+    width: 100%;
+    border: 1px, solid white;
+    border-radius: 10px;
+    background: #f0e9e9;
+    color: black;
+}
+
+/* input[type=email] {
+    height: 40px;
+    width: 100%;
+     
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[type=number] {
+    height: 40px;
+    width: 100%;
+     display: inline-block;
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   }
+   input[id=user_number] {
+    height: 40px;
+    width: 100%;
+     display: inline-block;
+     border-radius: 10px;
+     border: none;
+     background: #f1f1f1;
+   } */
+
+textarea[name=user_message] {
+    height: 100px;
+    margin-bottom: 20px;
+    background-color: #f0e9e9;
+    border: 1px, solid white;
+    border-radius: 10px;
+    color: black;
+    width: 100%;
+    font-size: 20px;
+}
+
+button {
+    margin-bottom: 30px;
+    height: 40px;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 20px;
+    background-color: green;
+    color: honeydew;
+}

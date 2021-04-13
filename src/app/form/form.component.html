@@ -1,0 +1,86 @@
+<html>
+<head>
+    
+</head>
+<body>
+    <div class="container">
+        <form name="myform" id="survey-form"#userForm="ngForm" >
+            <h1 style="text-align:center;font-size:25px; margin-top: 15px;">Survey form</h1>
+            <div class="form-group">
+                <label id="name-label" for="name">Name</label><br>
+                <input type="text" id="username"  
+                [(ngModel)]="formData.name"
+                name="username"
+                #username="ngModel"
+                 placeholder="Enter name here">  
+            </div>
+            <div class="form-group">
+                <label id="email-label" for="Email">Email</label><br>
+                <input type="text" id="mail" 
+                [(ngModel)]="formData.user_email" 
+                name="user_email"
+                #user_email="ngModel"
+               placeholder="Enter email here">  
+            </div>
+            <div class="form-group">
+                <label id="number-label" for="phone">Phone Number</label><br>
+                <!-- <input type="number" id="number" name="user_name" placeholder="Enter 10 digit number" min="1" max="9">  </div> -->
+                <input name="user_number"  id="phonenumber" 
+                [(ngModel)]="formData.user_number" 
+                name="user_number"
+                #user_number="ngModel"
+                placeholder="Enter 10 digit number">
+            </div>
+            <div class="form-group">
+                <label id="age-label" for="age">Age</label><br>
+                <input type="number"   id="age"
+                [(ngModel)]="formData.age" 
+                name="age"
+                #age="ngModel"
+                 placeholder="Enter age here">  
+            </div>
+
+            <!-- ------------------Radio Buttons-------------------------------- -->
+            <div >
+                <label for="Gender">Gender</label>
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input" 
+                    [(ngModel)]="formData.gender"
+                    name="gender" value="male" > 
+                    <label  class="form-check-label" for="">Male</label>
+                  </div>  
+                  <div class="form-check">
+                    <input type="radio" class="form-check-input"   
+                      [(ngModel)]="formData.gender"
+                    name="gender" value="female">
+                    <label class="form-check-label" for="">Female</label>
+                  </div>  
+                  <div class="form-check">
+                    <input type="radio"  class="form-check-input"
+                    [(ngModel)]="formData.gender"
+                    name="gender" value="other">
+                    <label class="form-check-label"for="">other</label>
+                </div>   
+            </div>
+
+            <!-------------------Text Area------------>
+            <div class="form-group">
+                <label id="msg" for="msg"></label>
+                <p> Any comment or suggestions?</p>
+                <textarea type="text"   
+                [(ngModel)]="formData.user_message" 
+                name="user_message"
+                #user_message="ngModel"  name="user_message" rows="4" cols="50" placeholder="Enter Text Here"></textarea>  
+            </div>
+
+
+            <!--------Button for submit the form-->
+            <div id="submitbutton">
+                <button type="submit" (click)="register()"id="submit">Submit</button>  
+            </div>
+        </form>
+
+    </div>
+</body>
+
+</html>
