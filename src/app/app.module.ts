@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms'
 import { HomeComponent } from './home/home.component';
 import { FormComponent } from './form/form.component';
+import { FormSubmmisionDetailComponent } from './form-submmision-detail/form-submmision-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FormComponent,
+    FormSubmmisionDetailComponent,
   ],
   imports: [
     BrowserModule,

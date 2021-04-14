@@ -4,7 +4,7 @@
 </head>
 <body>
     <div class="container">
-        <form name="myform" id="survey-form"#userForm="ngForm" >
+        <form name="myform" action="survey_from_submissions.html" id="survey-form"#userForm="ngForm" (ngSubmit)=" RegisterUser(userForm)" >
             <h1 style="text-align:center;font-size:25px; margin-top: 15px;">Survey form</h1>
             <div class="form-group">
                 <label id="name-label" for="name">Name</label><br>
@@ -76,7 +76,7 @@
 
             <!--------Button for submit the form-->
             <div id="submitbutton">
-                <button type="submit" (click)="register()"id="submit">Submit</button>  
+                <button type="submit"id="submit"   routerLinkActive="active" routerLink= "detail">Submit</button>  
             </div>
         </form>
 
