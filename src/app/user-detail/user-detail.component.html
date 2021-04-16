@@ -1,0 +1,27 @@
+<body  style="background-color: rgba(244, 244, 248, 0.945);" >
+    <h1 style="text-align: center;">View User Deatils</h1>
+    <table id="usertable">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>number</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>describe</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody >
+            <td>{{ user_name }}</td>
+            <td>{{email}}</td>
+            <td>{{usernumber}}</td>
+            <td>{{ _age }}</td>
+            <td>{{ _gender }}</td>
+            <td>{{ _usermessage}}</td>
+            <td><button onclick="editdetail()" style="background-color:darkgrey;">Edit</button></td>
+        </tbody>
+    </table>
+    <a routerLink="/detail" routerLinkActive="active" style="color: blue; font-size: 20px; margin: right;">Back</a>
+   
+</body>

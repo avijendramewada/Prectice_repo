@@ -1,5 +1,5 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import {  Router } from '@angular/router';
 @Component({
   selector: 'app-form-submmision-detail',
   templateUrl: './form-submmision-detail.component.html',
@@ -7,19 +7,19 @@ import { Component, OnInit, Renderer2 } from '@angular/core';
 })
 export class FormSubmmisionDetailComponent implements OnInit {
  
+  userData:any[] = [];
+  useremail: any;
+ 
 
-
-  constructor() { }
+  constructor(private router :Router) { }
 
   ngOnInit(): void {
-    Object.keys(localStorage).forEach(data => 
-      {
-        let item = localStorage.getItem(data);
-        console.log(item);
-        // item is the item from storage.
-      });
-     
-    } 
+    this.userData = JSON.parse(localStorage.getItem('userData') || JSON.stringify([]));
+    
+  } 
+  viewdetail(useremail: any){
+    this.router.navigate(['/viewdetail',useremail]);
+  }
 }
 
 

@@ -5,17 +5,16 @@
      <tr>
          <th>Name</th>
          <th>Email</th>
-         <th></th>
+         <td><button routerLink="/form" routerLinkActive="active" style="background-color:darkgrey; padding: 10px;">Back</button></td>
+
      </tr>
      </thead>
      <tbody>
-        <tr ng-repeat="user in users ">
-          <td></td>
-          <td></td>
-          <td><button>View</button></td>
-        
+        <tr *ngFor="let user of userData">
+          <td>{{ user.username }}</td>
+          <td>{{ user.user_email }}</td>
+          <td><button class="button" (click)="viewdetail(user.user_email)" >View Detail</button></td>
         </tr>
       </tbody>
  </table>
- 
  </body>
