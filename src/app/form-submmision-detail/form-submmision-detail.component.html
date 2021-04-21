@@ -5,16 +5,19 @@
      <tr>
          <th>Name</th>
          <th>Email</th>
-         <td><button routerLink="/form" routerLinkActive="active" style="background-color:darkgrey; padding: 10px;">Back</button></td>
-
+         <th><a routerLink="/form" routerLinkActive="active"   >Back</a></th>
      </tr>
      </thead>
      <tbody>
         <tr *ngFor="let user of userData">
           <td>{{ user.username }}</td>
           <td>{{ user.user_email }}</td>
-          <td><button class="button" (click)="viewdetail(user.user_email)" >View Detail</button></td>
+          <td><button class="button" (click)="viewdetail(user.user_email)" >View Detail</button>
+            <button class="button" (click) = "editRecord(user.user_email)" >Edit</button>
+              <button class="button" (click) ="deleteRecord(user.user_email)" >Delete</button></td>
         </tr>
       </tbody>
  </table>
  </body>
+ <!-- style="background-color:darkgrey; width:80px;padding: 10px; font-size: 18px;" -->
+ <!-- style="background-color:darkgrey; padding: 10px;margin-left: 40px; font-size: 18px;" -->

@@ -1,0 +1,24 @@
+<!-- <p *ngFor="let user of collection">
+{{user.email}} {{user.first_name}}
+</p> -->
+<body >
+    <h1 style="text-align: center;"> List of Users</h1>
+ <table id="usertable">
+     <thead>
+     <tr>
+         <th>First Name</th>
+         <th>Last Name</th>
+         <th>Email</th>
+         <th>avatar</th>
+     </tr>
+     </thead>
+     <tbody>
+        <tr  *ngFor="let user of collection">
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name}}</td>
+          <td>{{ user.email}}</td>
+          <td>{{ user.avatar}}</td>
+        </tr>
+      </tbody>
+ </table>
+ </body>

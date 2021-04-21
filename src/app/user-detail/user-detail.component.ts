@@ -17,7 +17,9 @@ export class UserDetailComponent implements OnInit {
   _gender : any;
   _usermessage : any;
  
-  constructor(private route: ActivatedRoute) { }
+  constructor(private router: Router,private route: ActivatedRoute) { 
+    
+  }
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     let data = localStorage.getItem('userData') || JSON.stringify([]);
@@ -32,7 +34,7 @@ this._age = userDetail[0].age;
 this._gender = userDetail[0].gender;
 this._usermessage = userDetail[0].user_message;
 
-
-
   }
+ 
+  
 }
